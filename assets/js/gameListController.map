@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "gameListController.js",
+  "sourceRoot": "../../app/gameList",
+  "sources": [
+    "gameListController.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA,kBAAA;;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,KAAf,CAAqB,CAAC,UAAtB,CAAiC,oBAAjC,EAEQ;AACJ,IAAA,kBAAC,CAAA,OAAD,GAAU,EAAV,CAAA;;AACa,IAAA,4BAAA,GAAA,CADb;;8BAAA;;MAHJ,CAAA,CAAA;AAAA"
+}

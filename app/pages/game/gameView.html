@@ -1,0 +1,45 @@
+<div class="page game-view">
+    <link rel="stylesheet" type="text/css" href="assets/style/games/{{vm.gameName}}.css" />
+    <div ng-show="vm.gameOverMessage()">
+        <h2>{{vm.gameOverMessage()}}</h2>
+        <a href="" onclick="location.reload()">Start New Game</a>
+    </div>
+    <h3>{{vm.lastMove()}} {{vm.gameMessage()}}</h3>
+    <div class="board" ng-class="{
+        'is-active': !vm.gameOverMessage(),
+        'no-selected-piece': !vm.selected.cell
+        }">
+        <table>
+            <tr><th></th><th ng-repeat="name in vm.columnNames">{{name}}</th><th></th></tr>
+            <tr ng-repeat="row in vm.cells">
+                <th>{{vm.rowNames[$index]}}</th>
+                <td ng-repeat="cell in row" ng-mousedown="vm.cellClick(cell)"
+                    ng-cell-row="{{cell.row}}" ng-cell-column="{{cell.column}}" ng-class="{
+                    'available-move': vm.selected.availableMoves.indexOf(cell) != -1,
+                    'current-piece': cell == vm.selected.cell,
+                    'current-player-piece': cell.piece && cell.piece.player == vm.currentPlayer && cell != vm.selected.cell && cell.piece.canMove,
+                    'can-attack-move': vm.selected.canAttackMoves.indexOf(cell) != -1
+                    }" x-lvl-drop-target="true" x-on-drop="vm.dropped(dragEl, dropEl)"></td>
+                <th>{{vm.rowNames[$index]}}</th>
+            </tr>
+            <tr><th></th><th ng-repeat="name in vm.columnNames">{{name}}</th><th></th></tr>
+        </table>
+        <ul>
+            <li ng-repeat="piece in vm.pieces" class="piece onboard"
+                ng-cell-row="{{piece.cell.row}}"
+                ng-cell-column="{{piece.cell.column}}"
+                ng-piece="{{piece.kind}}"
+                ng-player="{{piece.player}}"
+                ng-mousedown="vm.cellClick(piece.cell)"
+                x-lvl-draggable="true" x-lvl-drop-target="true" x-on-drop="vm.dropped(dragEl, dropEl)"></li>
+        </ul>
+        <ul>
+            <li ng-repeat="piece in vm.deadPieces" class="piece"
+                ng-piece="{{piece.kind}}"
+                ng-player="{{piece.player}}"></li>
+        </ul>
+    </div><br />
+    <h3 ng-show="vm.manualEndTurn()"><a href="" ng-click="vm.endTurn()">End Turn</a></h3>
+    <input type="button" value="< Prev Move" ng-click="vm.prevMove()" ng-disabled="!vm.canPrevMove()" />
+    <input type="button" value="Next Move >" ng-click="vm.nextMove()" ng-disabled="!vm.canNextMove()"  /><br />
+</div>

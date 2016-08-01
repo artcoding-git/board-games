@@ -1,0 +1,80 @@
+@import "_values"
+@import "_mixins"
+@import "_common"
+@import "_pieces"
+
+=cell($cellColor)
+  background-color: $cellColor
+
++keyframes("available-move")
+  0%
+    opacity: 1
+  100%
+    opacity: .5
+
+.board
+  display: inline-block
+  position: relative
+  opacity: 0.7
+
+  &.is-active
+    opacity: 1
+
+  table
+    background: url("#{$img}/wood.jpg") left top / contain no-repeat
+
+  ul
+    max-width: 2 * $boardBorderSize + 8 * $cellSize
+
+  td, th
+    width: $cellSize
+    height: $cellSize
+    text-align: center
+    vertical-align: middle
+    position: relative
+
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      width: $cellSize
+      height: $cellSize
+      display: block
+
+    &.available-move::after
+      background: $availableMoveColor
+    &.current-piece::after
+      background: $currentPieceColor
+    &.current-player-piece::after
+      background: $currentPlayerColor
+      opacity: 0.75
+    &.can-attack-move::after
+      background: $canAttackMoveColor
+
+  &.no-selected-piece .current-player-piece::after
+    +animation("available-move 0.7s alternate infinite")
+
+  tr:first-child th,
+  tr:last-child th
+    height: $boardBorderSize
+    &::after
+      height: $boardBorderSize
+
+  th:first-child,
+  th:last-child
+    width: $boardBorderSize
+    &::after
+      width: $boardBorderSize
+
+  tr:nth-child(2n)
+    td:nth-child(2n)
+      +cell($lightCellColor)
+    td:nth-child(2n+1)
+      +cell($darkCellColor)
+  tr:nth-child(2n+1)
+    td:nth-child(2n)
+      +cell($darkCellColor)
+    td:nth-child(2n+1)
+      +cell($lightCellColor)
+

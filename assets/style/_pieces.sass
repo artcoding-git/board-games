@@ -1,0 +1,26 @@
+@import "_values"
+@import "_mixins"
+
+.board .piece
+  width: $cellSize
+  height: $cellSize
+  background-position: center center
+  background-repeat: no-repeat
+
+  &.onboard
+    position: absolute
+    left: 0
+    top: 0
+    +transition("all 0.5s ease")
+
+  &:not(.onboard)
+    display: inline-block
+    margin-right: -$cellSize / 3
+
+  @for $row from 0 to 8
+    &[ng-cell-row='#{$row}']
+      top: $boardBorderSize + $row * $cellSize
+
+  @for $column from 0 to 8
+    &[ng-cell-column='#{$column}']
+      left: $boardBorderSize + $column * $cellSize

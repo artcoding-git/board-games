@@ -1,0 +1,19 @@
+.piece[ng-piece='Checker'][ng-player='b'] {
+  background-image: url("../../img/checkers/bChecker.png");
+  background-position: center center;
+  background-size: 6.4vmin; }
+
+.piece[ng-piece='CheckerKing'][ng-player='b'] {
+  background-image: url("../../img/checkers/bCheckerKing.png");
+  background-position: center center;
+  background-size: 6.4vmin; }
+
+.piece[ng-piece='Checker'][ng-player='w'] {
+  background-image: url("../../img/checkers/wChecker.png");
+  background-position: center center;
+  background-size: 6.4vmin; }
+
+.piece[ng-piece='CheckerKing'][ng-player='w'] {
+  background-image: url("../../img/checkers/wCheckerKing.png");
+  background-position: center center;
+  background-size: 6.4vmin; }

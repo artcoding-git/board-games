@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "tempHistory.js",
+  "sourceRoot": "../../app/services/gameBase",
+  "sources": [
+    "tempHistory.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,OAAO,CAAC,MAAR,CAAe,KAAf,CAAqB,CAAC,OAAtB,CAA8B,aAA9B,EAEE;AAAA,IAAA,KAAA,EAAO,GAAP;AAAA,IACA,KAAA,EAAO,GADP;GAFF,CAAA,CAAA;AAAA"
+}

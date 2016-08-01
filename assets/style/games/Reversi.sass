@@ -1,0 +1,33 @@
+@import "../_values"
+
+$imgPieceSize: 60px
+
+.board
+  table
+    background-image: url("../#{$img}/green.jpg")
+  tr:nth-child(2n)
+    td:nth-child(2n),
+    td:nth-child(2n+1)
+      background-color: transparent
+  tr:nth-child(2n+1)
+    td:nth-child(2n),
+    td:nth-child(2n+1)
+      background-color: transparent
+  td
+    border: solid 0.5vmin black
+
+  .piece
+    @for $row from 0 to 8
+      &[ng-cell-row='#{$row}']
+        top: $boardBorderSize + $row * ($cellSize + 0.5vmin)
+
+    @for $column from 0 to 8
+      &[ng-cell-column='#{$column}']
+        left: $boardBorderSize + $column * ($cellSize + 0.5vmin)
+
+$colors: "b" "w"
+@each $color in $colors
+  .piece[ng-piece='ReversiPiece'][ng-player='#{$color}']
+    background-image: url("../#{$img}/reversi/#{$color}.png")
+    background-position: center center
+    background-size: $cellSize * 0.8

@@ -1,0 +1,15 @@
+@import "../_values"
+
+$imgPieceSize: 200px
+$imgScale: $cellSize / $imgPieceSize
+
+$colors: "b" "w"
+$pieces: "Pawn" "Rook" "Knight" "Queen" "Bishop" "King"
+@each $color in $colors
+  @each $piece in $pieces
+    .piece[ng-piece='#{$piece}'][ng-player='#{$color}']
+      background-image: url("../#{$img}/chess/pieces.png")
+      background-position-x: (1 - index($pieces, $piece)) * $imgPieceSize * $imgScale
+      background-position-y: (1 - index($colors, $color)) * $imgPieceSize * $imgScale
+      background-size: length($pieces) * $imgPieceSize * $imgScale length($colors) * $imgPieceSize * $imgScale
+

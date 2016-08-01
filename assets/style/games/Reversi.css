@@ -1,0 +1,52 @@
+.board table {
+  background-image: url("../../img/green.jpg"); }
+.board tr:nth-child(2n) td:nth-child(2n),
+.board tr:nth-child(2n) td:nth-child(2n+1) {
+  background-color: transparent; }
+.board tr:nth-child(2n+1) td:nth-child(2n),
+.board tr:nth-child(2n+1) td:nth-child(2n+1) {
+  background-color: transparent; }
+.board td {
+  border: solid 0.5vmin black; }
+.board .piece[ng-cell-row='0'] {
+  top: 4vmin; }
+.board .piece[ng-cell-row='1'] {
+  top: 12.5vmin; }
+.board .piece[ng-cell-row='2'] {
+  top: 21vmin; }
+.board .piece[ng-cell-row='3'] {
+  top: 29.5vmin; }
+.board .piece[ng-cell-row='4'] {
+  top: 38vmin; }
+.board .piece[ng-cell-row='5'] {
+  top: 46.5vmin; }
+.board .piece[ng-cell-row='6'] {
+  top: 55vmin; }
+.board .piece[ng-cell-row='7'] {
+  top: 63.5vmin; }
+.board .piece[ng-cell-column='0'] {
+  left: 4vmin; }
+.board .piece[ng-cell-column='1'] {
+  left: 12.5vmin; }
+.board .piece[ng-cell-column='2'] {
+  left: 21vmin; }
+.board .piece[ng-cell-column='3'] {
+  left: 29.5vmin; }
+.board .piece[ng-cell-column='4'] {
+  left: 38vmin; }
+.board .piece[ng-cell-column='5'] {
+  left: 46.5vmin; }
+.board .piece[ng-cell-column='6'] {
+  left: 55vmin; }
+.board .piece[ng-cell-column='7'] {
+  left: 63.5vmin; }
+
+.piece[ng-piece='ReversiPiece'][ng-player='b'] {
+  background-image: url("../../img/reversi/b.png");
+  background-position: center center;
+  background-size: 6.4vmin; }
+
+.piece[ng-piece='ReversiPiece'][ng-player='w'] {
+  background-image: url("../../img/reversi/w.png");
+  background-position: center center;
+  background-size: 6.4vmin; }

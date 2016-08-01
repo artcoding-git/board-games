@@ -1,0 +1,12 @@
+@import "../_values"
+
+$imgPieceSize: 46px
+
+$colors: "b" "w"
+$pieces: "Checker" "CheckerKing"
+@each $color in $colors
+  @each $piece in $pieces
+    .piece[ng-piece='#{$piece}'][ng-player='#{$color}']
+      background-image: url("../#{$img}/checkers/#{$color}#{$piece}.png")
+      background-position: center center
+      background-size: $cellSize * 0.8

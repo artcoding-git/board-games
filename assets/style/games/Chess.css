@@ -1,0 +1,71 @@
+.piece[ng-piece='Pawn'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: 0vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Rook'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -8vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Knight'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -16vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Queen'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -24vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Bishop'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -32vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='King'][ng-player='b'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -40vmin;
+  background-position-y: 0vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Pawn'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: 0vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Rook'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -8vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Knight'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -16vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Queen'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -24vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='Bishop'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -32vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
+
+.piece[ng-piece='King'][ng-player='w'] {
+  background-image: url("../../img/chess/pieces.png");
+  background-position-x: -40vmin;
+  background-position-y: -8vmin;
+  background-size: 48vmin 16vmin; }
